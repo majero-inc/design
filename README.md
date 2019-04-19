@@ -1,2 +1,2 @@
-# styling
-Styling framework for Majero.
+# Design
+Design ideas.
