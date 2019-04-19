@@ -1,0 +1,22 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+#wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 50px 1fr auto;
+  grid-template-areas: "top-bar" "nav" "content" "footer"; }
+  #wrapper #top-bar {
+    background-color: red;
+    grid-area: top-bar; }
+  #wrapper #nav {
+    background-color: green;
+    grid-area: nav; }
+  #wrapper #content {
+    background-color: blue;
+    grid-area: content; }
+  #wrapper #footer {
+    background-color: yellow;
+    grid-area: footer; }
