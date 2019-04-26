@@ -1,22 +1,60 @@
 html, body {
+  font-family: "Signika", arial;
+  background-color: black;
+  color: white; }
+
+* {
   margin: 0;
   padding: 0; }
+
+.logo {
+  font-family: "Gugi", arial;
+  text-transform: uppercase; }
 
 #wrapper {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50px 50px 1fr auto;
-  grid-template-areas: "top-bar" "nav" "content" "footer"; }
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 40px 1fr auto;
+  grid-template-areas: "top-bar top-bar" "side-bar content" "side-bar footer"; }
   #wrapper #top-bar {
-    background-color: red;
-    grid-area: top-bar; }
-  #wrapper #nav {
-    background-color: green;
-    grid-area: nav; }
+    line-height: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    grid-area: top-bar;
+    background-color: #600020;
+    color: white;
+    z-index: 99;
+    border-bottom: 1px solid #bbb; }
+    #wrapper #top-bar ul {
+      list-style: none; }
+      #wrapper #top-bar ul li {
+        display: inline-block;
+        padding-left: 12px; }
+        #wrapper #top-bar ul li a {
+          text-decoration: none;
+          color: white; }
+        #wrapper #top-bar ul li ul {
+          display: none; }
+      #wrapper #top-bar ul li:hover > ul {
+        display: block;
+        position: absolute;
+        background-color: black; }
+        #wrapper #top-bar ul li:hover > ul li {
+          display: block;
+          line-height: initial;
+          padding: 5px; }
+  #wrapper #side-bar {
+    width: 250px;
+    margin-left: -251px;
+    grid-area: side-bar;
+    border-right: 1px solid #bbb; }
   #wrapper #content {
-    background-color: blue;
-    grid-area: content; }
+    grid-area: content;
+    padding: 10px; }
   #wrapper #footer {
-    background-color: yellow;
-    grid-area: footer; }
+    grid-area: footer;
+    font-size: 9pt;
+    text-align: center;
+    padding: 3px;
+    border-top: 1px solid #bbb; }
